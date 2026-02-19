@@ -51,7 +51,7 @@ const orderedCountries = locale === 'ko'
   );
   return (
     <>
-      <h4>{resolve(country.name, locale)}</h4>
+      <h4 id={country.id}>{resolve(country.name, locale)}</h4>
       <ul>
         {items.map((item: any) => (
           <li set:html={renderInline(resolve(item.text, locale))} />
